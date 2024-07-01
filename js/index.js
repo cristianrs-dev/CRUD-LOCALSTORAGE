@@ -13,20 +13,20 @@ let pessoa = [
 
   carregarTabela = function()
   {
-
+      let pessoas
       let pessoaString = this.localStorage.getItem("pessoa")
       let dados = JSON.parse(pessoaString) 
       let bodyTable = document.getElementById("bodyTable")
       bodyTable.innerHTML=""
-        pessoa = dados
-        for(i = 0; i < pessoa.length; i++)
+        pessoas = dados
+        for(i = 0; i < pessoas.length; i++)
           {
             bodyTable.innerHTML+= `
               <tr>
              <td>${i}</td>
-              <td>${pessoa[i].nome}</td>
-              <td>${pessoa[i].sobrenome}</td>
-              <td>${pessoa[i].email}</td>
+              <td>${pessoas[i].nome}</td>
+              <td>${pessoas[i].sobrenome}</td>
+              <td>${pessoas[i].email}</td>
               <td><button type="button" data-toggle="modal" data-target="#meuModal" onclick="modal();getIndice(${i});backModal()" class="btn btn-primary">editar</button></td>
               <td><button type="button" onclick="excluir(${i})" class="btn btn-danger">Excluir</button></td>
               </tr>`
