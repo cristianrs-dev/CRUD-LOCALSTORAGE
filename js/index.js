@@ -18,7 +18,7 @@ let pessoa = [
       let dados = JSON.parse(pessoaString) 
       let bodyTable = document.getElementById("bodyTable")
       bodyTable.innerHTML=""
-      pessoa = dados
+        pessoa = dados
         for(i = 0; i < pessoa.length; i++)
           {
             bodyTable.innerHTML+= `
